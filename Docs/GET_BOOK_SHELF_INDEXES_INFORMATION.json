@@ -1,0 +1,267 @@
+{
+	"code": 100000,
+	"data": {
+		"book_list": [{
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100209632",
+				"book_name": "龙门回忆录",
+				"is_original": 1,
+				"category_index": "3",
+				"total_word_count": "3484443",
+				"review_amount": "434",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c221018\/18-10-22200924-53056.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "一隅屋檐",
+				"uptime": "2023-03-18 23:03:29",
+				"last_chapter_info": {
+					"chapter_id": "110081113",
+					"book_id": "100209632",
+					"chapter_index": "846",
+					"chapter_title": "第九十八章 本就不是人",
+					"uptime": "2023-03-18 23:03:29",
+					"mtime": "2023-03-18 23:03:29",
+					"recommend_book_info": "[]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2023-02-18 14:21:53",
+			"last_read_chapter_id": 107763037,
+			"last_read_chapter_update_time": 1679152852,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100071780",
+				"book_name": "404，消失的指挥官",
+				"is_original": 1,
+				"category_index": "6",
+				"total_word_count": "1003737",
+				"review_amount": "435",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c180628\/28-06-18155623-32976-100071780.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "宿希兰",
+				"uptime": "2021-03-29 00:00:01",
+				"last_chapter_info": {
+					"chapter_id": "106876570",
+					"book_id": "100071780",
+					"chapter_index": "466",
+					"chapter_title": "挖新坑了。",
+					"uptime": "2021-03-29 00:00:01",
+					"mtime": "2021-03-29 00:00:01",
+					"recommend_book_info": "[{\"book_name\":\"\为\什\么\你\们\都\想\吸\我\的\魂\啊\",\"book_id\":\"100234988\"}]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2023-01-25 10:15:35",
+			"last_read_chapter_id": 102271566,
+			"last_read_chapter_update_time": 1679137170,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100060280",
+				"book_name": "指挥官：零",
+				"is_original": 1,
+				"category_index": "3",
+				"total_word_count": "1621618",
+				"review_amount": "2220",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c180215\/15-02-18124703-92516-100060280.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "无双兔",
+				"uptime": "2020-05-02 00:35:33",
+				"last_chapter_info": {
+					"chapter_id": "105171978",
+					"book_id": "100060280",
+					"chapter_index": "738",
+					"chapter_title": "婚礼代表人（下）",
+					"uptime": "2020-05-02 00:35:33",
+					"mtime": "2020-06-14 10:26:27",
+					"recommend_book_info": "[]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2022-12-04 13:10:48",
+			"last_read_chapter_id": 105171978,
+			"last_read_chapter_update_time": 1674649478,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100340959",
+				"book_name": "博士竟是我自己？",
+				"is_original": 1,
+				"category_index": "3",
+				"total_word_count": "414371",
+				"review_amount": "97",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c220922\/22-09-22163941-33893.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "垫子",
+				"uptime": "2023-01-02 01:06:12",
+				"last_chapter_info": {
+					"chapter_id": "109771771",
+					"book_id": "100340959",
+					"chapter_index": "144",
+					"chapter_title": "136.我们无条件信赖着博士（4k）",
+					"uptime": "2023-01-02 01:06:12",
+					"mtime": "2023-01-02 01:06:12",
+					"recommend_book_info": "[]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2022-11-04 16:02:33",
+			"last_read_chapter_id": 109771771,
+			"last_read_chapter_update_time": 1678932794,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100231366",
+				"book_name": "博士，答应我好吗",
+				"is_original": 1,
+				"category_index": "6",
+				"total_word_count": "1696043",
+				"review_amount": "434",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c210225\/25-02-21172508-7897.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "御姐桂圆天下第一",
+				"uptime": "2023-03-06 01:45:18",
+				"last_chapter_info": {
+					"chapter_id": "110031592",
+					"book_id": "100231366",
+					"chapter_index": "815",
+					"chapter_title": "新书",
+					"uptime": "2023-03-06 01:45:18",
+					"mtime": "2023-03-06 01:45:18",
+					"recommend_book_info": "[{\"book_name\":\"\怎\么\你\又\重\生\了\？\！\",\"book_id\":\"100358142\"}]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2022-07-07 19:22:44",
+			"last_read_chapter_id": 106731920,
+			"last_read_chapter_update_time": 1679142712,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100264633",
+				"book_name": "少女前线，我与人形的末世",
+				"is_original": 1,
+				"category_index": "3",
+				"total_word_count": "1384303",
+				"review_amount": "254",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c210807\/07-08-21125743-70907.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "LOrian",
+				"uptime": "2023-03-09 12:20:19",
+				"last_chapter_info": {
+					"chapter_id": "110044317",
+					"book_id": "100264633",
+					"chapter_index": "681",
+					"chapter_title": "报告情况",
+					"uptime": "2023-03-09 12:20:19",
+					"mtime": "2023-03-09 12:20:19",
+					"recommend_book_info": "[]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2022-02-02 17:00:32",
+			"last_read_chapter_id": 110001369,
+			"last_read_chapter_update_time": 1678591061,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100242438",
+				"book_name": "多维世界的命运共同体",
+				"is_original": 1,
+				"category_index": "6",
+				"total_word_count": "2992283",
+				"review_amount": "254",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c221202\/02-12-22134604-95080.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "Unknowerror",
+				"uptime": "2023-03-18 08:00:02",
+				"last_chapter_info": {
+					"chapter_id": "110078152",
+					"book_id": "100242438",
+					"chapter_index": "814",
+					"chapter_title": "第七百八十四章 有聚有散",
+					"uptime": "2023-03-18 08:00:02",
+					"mtime": "2023-03-18 13:59:20",
+					"recommend_book_info": "[]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2021-12-19 08:36:51",
+			"last_read_chapter_id": 110078152,
+			"last_read_chapter_update_time": 1679113273,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100213550",
+				"book_name": "关于我被塔露拉捡到收养这件事",
+				"is_original": 1,
+				"category_index": "6",
+				"total_word_count": "1602659",
+				"review_amount": "361",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c210823\/23-08-21080156-99266.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "墨汁炒鱿鱼",
+				"uptime": "2022-03-06 18:50:59",
+				"last_chapter_info": {
+					"chapter_id": "108454604",
+					"book_id": "100213550",
+					"chapter_index": "419",
+					"chapter_title": "新书已经发布，希望各位点点关注",
+					"uptime": "2022-03-06 18:50:59",
+					"mtime": "2022-03-06 18:50:59",
+					"recommend_book_info": "[{\"book_name\":\"\被\踹\出\罗\德\岛\，\龙\门\桥\洞\盖\小\被\儿\",\"book_id\":\"100304287\"}]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2021-06-02 18:08:43",
+			"last_read_chapter_id": 108454604,
+			"last_read_chapter_update_time": 1675093461,
+			"is_notify": "0"
+		}, {
+			"is_buy": "0",
+			"book_info": {
+				"book_id": "100240179",
+				"book_name": "在漫威开格里芬的提督",
+				"is_original": 1,
+				"category_index": "6",
+				"total_word_count": "3607540",
+				"review_amount": "659",
+				"cover": "https:\/\/c1.kuangxiangit.com\/uploads\/allimg\/c210412\/12-04-21120306-60424.jpg",
+				"discount": 1,
+				"discount_end_time": "",
+				"author_name": "蓝色目光",
+				"uptime": "2022-05-23 09:50:23",
+				"last_chapter_info": {
+					"chapter_id": "108809444",
+					"book_id": "100240179",
+					"chapter_index": "1104",
+					"chapter_title": "新书上传",
+					"uptime": "2022-05-23 09:50:23",
+					"mtime": "2022-05-23 09:50:23",
+					"recommend_book_info": "[{\"book_name\":\"\灵\气\复\苏\时\代\的\初\号\机\驾\驶\员\碇\真\嗣\",\"book_id\":\"100319882\"}]"
+				},
+				"update_status": "1"
+			},
+			"mod_time": "2021-05-31 15:18:42",
+			"last_read_chapter_id": 108809444,
+			"last_read_chapter_update_time": 1677219388,
+			"is_notify": "0"
+		}]
+	}
+}

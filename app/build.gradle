@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\clove\\AndroidStudio_Key\\APK_Key.jks')
+            keyAlias 'Moling'
+            storePassword '519141WDSJ@qq'
+            keyPassword '519141WDSJ@qq'
+        }
+    }
+    namespace 'com.moling.wearnovel'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.moling.wearnovel"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.release
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'com.google.android.gms:play-services-wearable:17.1.0'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.wear:wear:1.2.0'
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.squareup.okio:okio:1.17.4'
+    // Cat AED Decrypt
+    api fileTree(dir: 'libs', include: ['*.aar'])
+    // FastJson
+    implementation 'com.alibaba.fastjson2:fastjson2:2.0.25'
+}

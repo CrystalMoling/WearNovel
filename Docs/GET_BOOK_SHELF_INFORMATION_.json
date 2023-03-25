@@ -1,0 +1,18 @@
+{
+	"code": 100000,
+	"data": {
+		"shelf_list": [{
+			"shelf_id": "9669015",
+			"reader_id": "9962245",
+			"shelf_name": "我的书架",
+			"shelf_index": "1",
+			"book_limit": 99999
+		}, {
+			"shelf_id": "9669016",
+			"reader_id": "9962245",
+			"shelf_name": "我的书架",
+			"shelf_index": "1",
+			"book_limit": 99999
+		}]
+	}
+}
