@@ -38,6 +38,7 @@ public class MainAct extends Activity {
 
     // region 系统变量
     public static SharedPreferences.Editor preferencesEditor;
+    public static SharedPreferences sharedPreferences;
     public static String documentsBaseDir;
     // endregion
 
@@ -79,7 +80,7 @@ public class MainAct extends Activity {
         MainAct = this;
 
         // 获取SharedPreferences对象
-        SharedPreferences sharedPreferences = getSharedPreferences("settings",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("settings",MODE_PRIVATE);
         // 获取Editor对象的引用
         preferencesEditor = sharedPreferences.edit();
         // 阅读器 Intent

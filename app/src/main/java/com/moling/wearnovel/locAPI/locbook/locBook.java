@@ -106,10 +106,12 @@ public class locBook {
 
         JSONArray divisionChapterList = bookDivisionList.getJSONObject(divisionIndex).getJSONArray("chapter_list");
         boolean chapterExists = false;
+        int chapterIndex = 0;
         for (int i = 0; i < (long) divisionChapterList.size(); i++) {
             //Log.d("[locBook]", divisionChapterList.getJSONObject(i).getString("chapter_id") + "><" + chapter.getChapter_id());
             if (Objects.equals(divisionChapterList.getJSONObject(i).getString("chapter_id"), chapter.getChapter_id())) {
                 chapterExists = true;
+                chapterIndex = i;
                 break;
             }
         }
@@ -132,6 +134,20 @@ public class locBook {
             divisionChapterList.add(newChapter);
 
             //Log.d("[locBook]|[bookIndexJsonObj]", bookIndexJsonObj.toJSONString());
+            bufferSave(bookIndexFile, bookIndexJsonObj.toJSONString());
+        } else {
+            JSONObject existsChapter = divisionChapterList.getJSONObject(chapterIndex);
+
+            existsChapter.put("chapter_id", chapter.getChapter_id());
+            existsChapter.put("chapter_index", chapter.getChapter_index());
+            existsChapter.put("chapter_title", chapter.getChapter_title());
+            existsChapter.put("word_count", chapter.getWord_count());
+            existsChapter.put("tsukkomi_amount", chapter.getTsukkomi_amount());
+            existsChapter.put("is_paid", chapter.getIs_paid());
+            existsChapter.put("mtime", chapter.getMtime());
+            existsChapter.put("is_valid", chapter.getIs_valid());
+            existsChapter.put("auth_access", chapter.getAuth_access());
+
             bufferSave(bookIndexFile, bookIndexJsonObj.toJSONString());
         }
     }

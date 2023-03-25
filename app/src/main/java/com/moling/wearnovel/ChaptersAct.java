@@ -17,7 +17,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson2.JSONObject;
@@ -37,8 +39,11 @@ public class ChaptersAct extends Activity {
     book_list externalBookList;
     int externalChapterIndex;
     Handler addOption = null;
+    Handler progress = null;
     ListView chapterList;
     Button backButton;
+    LinearLayout progressLayout;
+    TextView progressText;
 
     @SuppressLint("HandlerLeak")
     @Override
@@ -49,6 +54,10 @@ public class ChaptersAct extends Activity {
 
         // 界面对象
         chapterList = (ListView) findViewById(R.id.list_chapter);
+        progressLayout = (LinearLayout) findViewById(R.id.layout_progress);
+        progressText = (TextView) findViewById(R.id.text_progress);
+
+        progressLayout.setVisibility(View.GONE);
 
         // 向 ListView 添加 Header
         LayoutInflater infla = LayoutInflater.from(this);
@@ -99,6 +108,18 @@ public class ChaptersAct extends Activity {
                     if (msg.what == 1) {
                         backButton.setText("卷");
                     }
+                }
+            }
+        };
+
+        // 进度条 Handler
+        progress = new Handler(){
+            public void handleMessage(Message msg){
+                if (msg.what == 1) {
+                    progressLayout.setVisibility(View.VISIBLE);
+                    progressText.setText((String) msg.obj);
+                } else {
+                    progressLayout.setVisibility(View.GONE);
                 }
             }
         };
@@ -195,6 +216,9 @@ public class ChaptersAct extends Activity {
     }
 
     private void Refresh_Division_list() {
+        MainAct.catAccount = MainAct.sharedPreferences.getString("Account", "");
+        MainAct.catToken = MainAct.sharedPreferences.getString("Token", "");
+        MainAct.catAppVer = MainAct.sharedPreferences.getString("AppVer", "");
         Log.d("[ChaptersAct]", "Refreshing division list...");
         Thread thread = new Thread(() -> {
             try {
@@ -209,6 +233,9 @@ public class ChaptersAct extends Activity {
                 toastMsg.obj = "远程目录拉取完成,正在同步至本地书架";
                 MainAct.callToast.sendMessage(toastMsg);
 
+                int total_chapter_count = division_list.toChapterList().size();
+                int processed_chapter_count = 0;
+
                 for (int i = 0; i < (long) division_list.getData().size(); i++) {
                     AddDivisionToIndex(externalBookList.getBook_info().getBook_id(), division_list.getData().get(i));
                     for (int j = 0; j < (long) division_list.getData().get(i).getChapter_list().size(); j++) {
@@ -217,6 +244,12 @@ public class ChaptersAct extends Activity {
                                 division_list.getData().get(i).getDivision_id(),
                                 division_list.getData().get(i).getChapter_list().get(j)
                         );
+                        processed_chapter_count += 1;
+                        // 显示进度条
+                        Message progressMsg = Message.obtain();
+                        progressMsg.what = 1;
+                        progressMsg.obj = processed_chapter_count + "/" + total_chapter_count;
+                        progress.sendMessage(progressMsg);
                     }
                 }
 
@@ -235,6 +268,11 @@ public class ChaptersAct extends Activity {
                 toastMsg = Message.obtain();
                 toastMsg.obj = "同步完成";
                 MainAct.callToast.sendMessage(toastMsg);
+
+                // 隐藏进度条
+                Message progressMsg = Message.obtain();
+                progressMsg.what = 0;
+                progress.sendMessage(progressMsg);
             } catch (RuntimeException e) {
                 Log.d("[ChaptersAct]", "Refresh failed: [" + e + "]");
                 Message toastMsg = Message.obtain();
