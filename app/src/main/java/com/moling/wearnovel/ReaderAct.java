@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ public class ReaderAct extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.reader);
         ReadAct = this;
 
@@ -96,14 +98,15 @@ public class ReaderAct extends Activity {
                 }
                 // 分割章节正文
                 int n = (chapterContent.length() + 72 - 1) / 72; //获取整个字符串可以被切割成字符子串的个数
-                String[] split = new String[n];
-                for (int i = 0; i < n; i++) {
-                    if (i < (n - 1)) {
-                        split[i] = chapterContent.substring(i * 72, (i + 1) * 72);
-                    } else {
-                        split[i] = chapterContent.substring(i * 72);
-                    }
-                }
+                //String[] split = new String[n];
+                //for (int i = 0; i < n; i++) {
+                //    if (i < (n - 1)) {
+                //        split[i] = chapterContent.substring(i * 72, (i + 1) * 72);
+                //    } else {
+                //        split[i] = chapterContent.substring(i * 72);
+                //    }
+                //}
+                String[] split = SplitChapterContent(chapterContent, 72);
                 // 保存章节页数
                 read_history_obj.put("total_pages", n);
                 bufferSave(readHistoryFile, read_history_obj.toJSONString());
@@ -112,7 +115,7 @@ public class ReaderAct extends Activity {
                 int last_read_page = read_history_obj.getInteger("last_read_page");
                 if (last_read_page < 0) { last_read_page = 0; }
                 else if (last_read_page > split.length - 1) { last_read_page = split.length - 1; }
-                contentText.setText(split[last_read_page]);
+                contentText.setText(split[last_read_page] + "\n");
 
                 // 设置 Header
                 headerText.setText(new SimpleDateFormat("HH:mm", Locale.CHINA).format(new Date()) + "\n" + (last_read_page + 1) + "/" + n);

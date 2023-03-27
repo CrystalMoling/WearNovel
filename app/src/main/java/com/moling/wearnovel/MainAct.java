@@ -62,8 +62,6 @@ public class MainAct extends Activity {
 
     // region 阅读页面相关
     public static String externalBookId;
-    public static String[] externalChapterContent;
-    public static int externalChapterPage;
     // endregion
 
     // region 页面控件
@@ -75,7 +73,6 @@ public class MainAct extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.main);
         MainAct = this;
 
